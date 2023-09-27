@@ -1,0 +1,27 @@
+<!--
+    :param name: String
+    :param email: String
+    :param phone_number: string
+    :param description: string
+    :param street_address: string
+    :param service_type: string
+    :param hours_operation: string
+    param reviews: string
+    <center> <h3>Enter a new charity <a href="{{ url_for('sign') }}">here</a></h3> </center>
+-->
+
+{% extends "layout.html" %}
+{% block content %}
+    <h3>Enter Information</h3>
+    <form action="{{ url_for('sign') }}" method=post>
+    <p class="heading">Name: <input type=text name=name>
+    <p class="heading">Email: <input type=text name=email>
+    <p class="heading">Phone Number: <input type=text name=phone_number>
+    <p class="heading">Description: <input type=text name=description>
+    <p class="heading">Street Address: <input type=text name=street_address>
+    <p class="heading">Charity Type: <input type=text name=service_type>
+    <p class="heading">Hours of Operation: <input type=text name=hours_operation>
+    <textarea rows=5 cols=50 name=reviews></textarea></p>
+    <p><input type=submit value=Add></p>
+    </form>
+{% endblock %}
