@@ -1,7 +1,6 @@
 # Cloud-Based Web Application
 
-This repository holds a robust, scalable web application designed for listing charities and social services. The application is designed with modern technologies ensuring seamless deployment and execution.
-This project is a cloud-based web application that provides a platform to list and view charities and social services in Medford. The application has been developed using a range of modern technologies including Python with Flask for the backend, SQLite for initial database operations, and Google Cloud Platform services for scalability and containerization.
+This repository holds a robust, scalable web application designed for listing charities and social services. The application has been developed using a range of modern technologies including Python with Flask for the backend, SQLite for initial database operations, and Google Cloud Platform services for scalability and containerization.
 
 ## Key Features
 
