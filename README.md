@@ -4,8 +4,8 @@ This repository holds a robust, scalable web application designed for listing ch
 
 ## Key Features
 
-- **Submission & Viewership**: Users can submit information about charities or social services. These entries can be viewed on a separate page.
-- **Data Entry Attributes**: Users can input various attributes about a charity such as:
+- **Submission & Viewership**: Users can submit information about a business. These entries can be viewed on a separate page.
+- **Data Entry Attributes**: Users can input various attributes about a business such as:
   - Name
   - Description
   - Street Address
@@ -18,11 +18,10 @@ This repository holds a robust, scalable web application designed for listing ch
 
 ## Technologies Used:
 
-- **Google Cloud Platform (GCP)**: Used for deploying the application ensuring scalability and performance.
 - **Docker**: The application is containerized using Docker, enabling consistency across multiple development, staging, and deployment environments.
 - **Flask**: A lightweight WSGI web application framework used to simplify tasks such as setting up the backend of the web service.
-- **SQLite**: Employed as a database backend for the application.
-- **Google Cloud Platform**: 
+- **SQLite3**: Employed as a database backend for the application.
+- **Google Cloud Platform**: Used for deploying the application ensuring scalability and performance.
   - **Cloud Build**: Managed service for building Docker containers.
   - **Container Registry**: Private container registry where Docker images are stored.
   - **Cloud Run**: Managed compute platform to deploy and manage containers.
