@@ -18,7 +18,7 @@ class model(Model):
     def select(self):
         """
         Returns guestentries list of lists
-        Each list in guestentries contains: name, email, date, phone number, description of charity
+        Each list in guestentries contains: name, email, date, phone number, description of business
             street address, service type, hours of operation, reviews
         :return: List of lists
         """

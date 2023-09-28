@@ -1,5 +1,5 @@
 """
-A simple charity flask app
+A business flask app
 
 This is created using SQL
 Command used: create table guestbook (name text, email text, signed_on date, message);
@@ -43,7 +43,7 @@ class model(Model):
         """
         connection = sqlite3.connect(DB_FILE)
         cursor = connection.cursor()
-        cursor.execute("SELECT * FROM charities")
+        cursor.execute("SELECT * FROM businesses")
         return cursor.fetchall()
 
     def insert(self, name, email, phone_number, description, street_address, service_type,hours_operation, reviews):
@@ -65,7 +65,7 @@ class model(Model):
         params = {'name':name, 'email':email,'phone_number':phone_number,'signed_on':date.today(),'description':description, 'street_address':street_address, 'service_type':service_type, 'hours_operation':hours_operation, 'reviews':reviews}
         connection = sqlite3.connect(DB_FILE)
         cursor = connection.cursor()
-        cursor.execute("insert into charities (name, email, phone_number, signed_on, description, street_address, service_type,hours_operation, reviews) VALUES (:name, :email, :phone_number, :signed_on, :description, :street_address, :service_type, :hours_operation, :reviews)", params)
+        cursor.execute("insert into businesses (name, email, phone_number, signed_on, description, street_address, service_type,hours_operation, reviews) VALUES (:name, :email, :phone_number, :signed_on, :description, :street_address, :service_type, :hours_operation, :reviews)", params)
 
         connection.commit()
         cursor.close()

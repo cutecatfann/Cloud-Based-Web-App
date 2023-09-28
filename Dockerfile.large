@@ -1,8 +1,13 @@
-# Use the Python version of alpine as the base image
-FROM python:alpine
+# Use Ubuntu 18.04 as the base image
+FROM ubuntu:18.04
 
 # Specify your e-mail address as the maintainer of the container image
 MAINTAINER YOUR NAME "yourname@gmail.com"
+
+# Execute apt-get update and install to get Python's package manager
+#  installed (pip)
+RUN apt-get update -y
+RUN apt-get install -y python-pip
 
 # Copy the contents of the current directory into the container directory /app
 COPY . /app
@@ -11,7 +16,7 @@ COPY . /app
 WORKDIR /app
 
 # Install the Python packages specified by requirements.txt into the container
-RUN pip install --no-cache -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Set the program that is invoked upon container instantiation
 ENTRYPOINT ["python"]

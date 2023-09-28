@@ -1,5 +1,5 @@
 """
-A simple charity flask app
+A business flask app
     :param name: String
     :param email: String
     :param phone_number: string
@@ -14,7 +14,7 @@ from flask.views import MethodView
 from index import Index
 from sign import Sign
 
-app = flask.Flask(__name__)       # our Flask app
+app = flask.Flask(__name__)       # Flask app
 
 app.add_url_rule('/',
                  view_func=Index.as_view('index'),
